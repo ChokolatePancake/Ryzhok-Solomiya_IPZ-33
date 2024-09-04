@@ -1,1 +1,0 @@
-function initBurger(){const e=document.querySelector(".header__burger"),t=document.querySelector(".header__right");e.addEventListener("click",(()=>{e.classList.toggle("open"),t.classList.toggle("show")}))}document.addEventListener("DOMContentLoaded",initBurger);
