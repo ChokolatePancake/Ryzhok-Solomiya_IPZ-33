@@ -1,0 +1,40 @@
+.doing {
+  padding-top: 50px;
+  h2 {
+    font-size: 36px;
+    font-weight: 550;
+    letter-spacing: 0.9px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block {
+    max-width: 370px;
+    position: relative;
+  }
+
+  &__text {
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 14px;
+    position: absolute;
+    background: rgba($light-black, 0.8);
+    font-weight: 600;
+  }
+  &__image {
+    height: 294px;
+    max-width: 370px;
+  }
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}

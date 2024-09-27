@@ -27,7 +27,8 @@
   &__text {
     text-transform: uppercase;
     line-height: 59px;
-    font-size: 46px;
+    font-size: 43px;
+    letter-spacing: -2px;
     margin: -57px auto 0;
     font-weight: 700;
     color: $white;
@@ -43,6 +44,11 @@
       background: $blue;
       border: none;
       color: $white;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        background: $dark-blue;
+      }
     }
   }
 
@@ -88,13 +94,6 @@
     }
     &__button button {
       padding: 15px 28px;
-    }
-  }
-
-  @include breakpoint(largePhone) {
-    &__text {
-      font-size: 22px;
-      line-height: 36px;
     }
   }
 }

@@ -8,6 +8,7 @@
     display: none;
   }
   h1 {
+    font-family: "Raleway", sans-serif;
     font-size: 27px;
   }
   &__mail, &__phone {
@@ -15,6 +16,7 @@
   }
   &__logo {
     span {
+      font-family: "Raleway", sans-serif;
       color: $blue;
     }
   }
@@ -24,13 +26,13 @@
     justify-content: space-between;
     width: 30.5%;
     li {
-      font-weight: 600;
-      font-size: 14px;
+      font-weight: 550;
+      font-size: 13px;
       position: relative;
       &:after {
         content: '';
         position: absolute;
-        bottom: -30px;
+        bottom: -31px;
         border-radius: 5px;
         background: $blue;
         left: 3%;
@@ -54,12 +56,12 @@
   }
   &__contacts {
     width: 39%;
+    margin-top: 8px;
     display: flex;
     justify-content: space-between;
   }
   &__text {
     font-size: 14px;
-    font-family: "Roboto", serif;
   }
   &__image {
     margin: 0 16px;
@@ -211,31 +213,6 @@
         margin-top: 35px;
         &:after {
           display: none;
-        }
-      }
-    }
-  }
-
-  @include breakpoint(largePhone) {
-    &__right.show {
-      height: 650px!important;
-    }
-    &__text {
-      font-size: 28px;
-    }
-    &__socials {
-      flex-wrap: wrap;
-      li {
-        &:nth-child(1), &:nth-child(3) {
-          margin-left: 40px;
-          margin-right: 20px;
-          padding-right: 20px;
-        }
-        &:nth-child(3) {
-          padding-right: 24px;
-        }
-        &:nth-child(2) {
-          border: none;
         }
       }
     }
