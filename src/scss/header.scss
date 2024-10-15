@@ -114,7 +114,7 @@
   }
 
   @include breakpoint(largeTablet) {
-    height: 60px;
+    height: 80px;
     &__contacts {
       width: 100%;
       flex-direction: column-reverse;
@@ -216,5 +216,9 @@
         }
       }
     }
+  }
+
+  @include breakpoint(tablet) {
+    height: 60px;
   }
 }

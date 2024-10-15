@@ -28,11 +28,11 @@
     text-transform: uppercase;
     line-height: 59px;
     font-size: 43px;
-    letter-spacing: -2px;
+    letter-spacing: 3.1px;
     margin: -57px auto 0;
     font-weight: 700;
     color: $white;
-    max-width: 700px;
+    max-width: 660px;
   }
   &__button {
     margin-top: 32px;
@@ -68,14 +68,22 @@
 
   @include breakpoint(largeTablet) {
     &__text {
-      font-size: 26px;
-      max-width: 400px;
+      font-size: 27px;
+      max-width: 370px;
+      margin-top: -59px;
+      line-height: 1.5;
+      letter-spacing: 1px;
     }
     &__image {
       height: 400px;
     }
-    &__button button {
-      padding: 12px 25px;
+    &__button {
+      margin-bottom: -60px;
+
+      button {
+        padding: 14px 24px;
+        font-size: 18px;
+      }
     }
   }
   @include breakpoint(tablet) {
@@ -92,8 +100,11 @@
       font-size: 27px;
       line-height: 42px;
     }
-    &__button button {
-      padding: 15px 28px;
+    &__button {
+      margin-bottom: -55px;
+      button {
+        padding: 15px 24px;
+      }
     }
   }
 }

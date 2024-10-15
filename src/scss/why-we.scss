@@ -41,14 +41,27 @@
     }
   }
 
+  @include breakpoint(largeTablet) {
+    padding-top: 62px;
+    margin: 0 6px;
+    &__block {
+      margin-bottom: 16px;
+    }
+  }
+
   @include breakpoint(tablet) {
     max-width: 100%;
+    padding-top: 31px;
     &__block {
       max-width: 450px;
-      margin: 30px auto 0;
+      margin: 30px auto -11px;
     }
     h3 {
       text-align: center;
+      letter-spacing: 0.4px;
+    }
+    p {
+      letter-spacing: 0.4px;
     }
   }
 }

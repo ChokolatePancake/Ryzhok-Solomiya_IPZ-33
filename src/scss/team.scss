@@ -46,7 +46,6 @@
       padding: 11px;
       background: $white;
       transition: all 0.5s ease;
-      cursor: pointer;
       &:hover {
         background: $blue;
         svg {
@@ -80,6 +79,42 @@
       }
       &:nth-child(3),&:last-child {
         margin-top: 50px;
+      }
+    }
+  }
+
+  @include breakpoint(largeTablet) {
+    margin-top: 30px;
+    padding-bottom: 59px;
+    h2 {
+      font-size: 29.5px;
+      margin-top: 1px;
+      margin-bottom: 10px;
+    }
+    img {
+      width: 350px;
+      height: 376px;
+    }
+    &__socials {
+      margin-bottom: 24px;
+    }
+    &__block {
+      &:nth-child(3), &:nth-child(4) {
+        margin-top: 32px;
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    padding-bottom: 30px;
+    margin-top: 56px;
+    img {
+      width: 450px;
+      height: 461px;
+    }
+    &__block {
+      margin-bottom: 31px;
+      &:nth-child(3), &:nth-child(4) {
+        margin-top: 0;
       }
     }
   }
