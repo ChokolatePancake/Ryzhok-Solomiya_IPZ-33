@@ -1,0 +1,37 @@
+.popup {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+  background: rgba($black, 0.2);
+  width: 100%;
+  height: 100%;
+  &.show {
+    pointer-events: all;
+    opacity: 1;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    width: 528px;
+    margin: 0 auto;
+    height: 581px;
+    border-radius: 5px;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+  &__checkbox {
+    flex-direction: row;
+  }
+  h3 {
+    text-align: center;
+
+  }
+  &__close {
+    margin-left: auto;
+  }
+}

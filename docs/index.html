@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="banner__image">
-        <img src="images/banner.jpeg" alt="">
+<!--        <img src="images/banner.jpeg" alt="">-->
     </div>
 </div>
 <div class="container">
@@ -357,17 +357,34 @@
     </div>
 </footer>
 <div class="popup">
-    <h3>Залиште свої дані, ми вам передзвонимо</h3>
-    <label for="name">Ім'я</label>
-    <input id="name" type="text">
-    <label for="phone">Телефон</label>
-    <input type="tel" id="phone">
-    <label for="mail">Пошта</label>
-    <input type="email" id="mail">
-    <label for="message">Коментар</label>
-    <input id="message" type="text" placeholder="Введіть текст">
-    <input type="checkbox" id="">
+    <form class="popup__form">
+        <button type="button" class="popup__close">X</button>
+        <h3>Залиште свої дані, ми вам передзвонимо</h3>
+        <div class="popup__block popup__name">
+            <label for="name">Ім'я</label>
+            <input required id="name" type="text">
+        </div>
+        <div class="popup__block popup__phone">
+            <label for="phone">Телефон</label>
+            <input required type="tel" id="phone">
+        </div>
+        <div class="popup__block popup__mail">
+            <label for="mail">Пошта</label>
+            <input required type="email" id="mail">
+        </div>
+        <div class="popup__block popup__message">
+            <label for="message">Коментар</label>
+            <input id="message" type="text" placeholder="Введіть текст">
+        </div>
+        <div class="popup__block popup__checkbox">
+            <input required type="checkbox" id="checkbox">
+            <label for="checkbox">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label>
+        </div>
+        <button class="popup__submit" type="submit">Відправити</button>
+    </form>
 </div>
 <script src="js/burger.js"></script>
+<script src="js/form-validation.js"></script>
+<script src="js/phone.js"></script>
 </body>
 </html>
