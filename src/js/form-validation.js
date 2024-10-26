@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         form.querySelectorAll("[required]").forEach(field => {
             if (field.value.trim() === "") {
                 field.classList.add("highlight-error");
-                console.log("aaaaaaaaa")
                 isValid = false;
             } else if (field.type === "tel" && !isPhoneComplete(field.value)) {
                 field.classList.add("highlight-error");

@@ -48,6 +48,12 @@
         }
       }
     }
+    .active {
+      color: $blue;
+      &:after {
+        height: 5px;
+      }
+    }
   }
   &__right {
     width: 79.5%;
@@ -115,6 +121,29 @@
 
   @include breakpoint(largeTablet) {
     height: 80px;
+    &__contacts {
+      //margin-top: -1px;
+      width: 30.5%;
+      div {
+        font-size: 12px;
+      }
+    }
+    &__mail {
+      margin-top: -6px;
+      .header__image {
+        margin: 0 7px 0 16px;
+      }
+    }
+    &__phone {
+      margin-top: 6px;
+      .header__image {
+        margin: 0 7px 0 17px;
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    height: 60px;
     &__contacts {
       width: 100%;
       flex-direction: column-reverse;
@@ -216,9 +245,5 @@
         }
       }
     }
-  }
-
-  @include breakpoint(tablet) {
-    height: 60px;
   }
 }
