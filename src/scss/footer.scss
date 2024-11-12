@@ -29,11 +29,16 @@
     }
   }
 
-  p {
+  p a {
+    display: block;
     font-size: 15px;
     margin-bottom: 10px;
     margin-top: 10px;
     color: rgba($white,0.6);
+    transition: all 0.5s ease;
+    &:hover {
+      color: $blue!important;
+    }
   }
   &__address {
     color: $white!important;

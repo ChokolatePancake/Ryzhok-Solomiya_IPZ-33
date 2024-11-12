@@ -1,1 +1,0 @@
-function showPopup(){const e=document.querySelector(".header__burger"),o=document.querySelector(".popup");e.addEventListener("click",(()=>{o.classList.toggle("show")}))}
