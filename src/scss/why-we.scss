@@ -1,0 +1,67 @@
+.why-we {
+  padding-top: 93px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__block {
+    max-width: 270px;
+    &-image {
+      background: $grey;
+      border-radius: 5px;
+      text-align: center;
+      padding: 23px;
+    }
+    h3 {
+      font-size: 14px;
+      margin-top: 30px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      color: $dark-grey;
+      margin-top: 10px;
+      letter-spacing: -0.3px;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    &__block {
+      max-width: 200px;
+    }
+  }
+
+  @include breakpoint(laptop) {
+    max-width: 700px;
+    margin: 0 auto;
+    &__block {
+      max-width: 320px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include breakpoint(largeTablet) {
+    padding-top: 62px;
+    margin: 0 6px;
+    &__block {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    max-width: 100%;
+    padding-top: 31px;
+    &__block {
+      max-width: 450px;
+      margin: 30px auto -11px;
+    }
+    h3 {
+      text-align: center;
+      letter-spacing: 0.4px;
+    }
+    p {
+      letter-spacing: 0.4px;
+    }
+  }
+}

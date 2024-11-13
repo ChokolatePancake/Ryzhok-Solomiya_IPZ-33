@@ -1,0 +1,250 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+  &__socials {
+    display: none;
+  }
+  h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 27px;
+  }
+  &__mail, &__phone {
+    display: flex;
+  }
+  &__logo {
+    span {
+      font-family: "Raleway", sans-serif;
+      color: $blue;
+    }
+  }
+  &__menu {
+    display: flex;
+    margin-top: 9px;
+    justify-content: space-between;
+    width: 30.5%;
+    li {
+      font-weight: 550;
+      font-size: 13px;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -31px;
+        border-radius: 5px;
+        background: $blue;
+        left: 3%;
+        width: 100%;
+        height: 0;
+        z-index: 101;
+        transition: height 0.5s ease;
+      }
+      &:hover {
+        color: $blue;
+        &:after {
+          height: 5px;
+        }
+      }
+    }
+    .active {
+      color: $blue;
+      &:after {
+        height: 5px;
+      }
+    }
+  }
+  &__right {
+    width: 79.5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__contacts {
+    width: 39%;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    font-size: 14px;
+    color: $light-black;
+  }
+  &__image {
+    margin: 0 16px;
+  }
+  &__contact {
+    &:hover {
+      color: $blue;
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+  &__mail {
+    .header__image {
+      margin: 0 16px 0 20px;
+    }
+  }
+  &__burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  @include breakpoint(desktop) {
+    &__contacts {
+      width: 49%;
+    }
+  }
+  @include breakpoint(laptop) {
+    height: 80px;
+    &__contacts {
+      width: 30%;
+    }
+    &__contacts {
+      flex-direction: column;
+      a {
+        display: block;
+      }
+    }
+    &__mail {
+      .header__image {
+        margin: 0 16px 0 16px;
+      }
+    }
+    &__right {
+      width: 70%;
+    }
+    &__menu {
+      width: 50%;
+    }
+  }
+
+  @include breakpoint(largeTablet) {
+    height: 80px;
+    &__contacts {
+      //margin-top: -1px;
+      width: 30.5%;
+      div {
+        font-size: 12px;
+      }
+    }
+    &__mail {
+      margin-top: -6px;
+      .header__image {
+        margin: 0 7px 0 16px;
+      }
+    }
+    &__phone {
+      margin-top: 6px;
+      .header__image {
+        margin: 0 7px 0 17px;
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    height: 60px;
+    &__contacts {
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+    &__burger {
+      display: block;
+      position: absolute;
+      right: 20px;
+      z-index: 2;
+      margin-top: -7px;
+      margin-left: 50px;
+      padding: 5px;
+      border-radius: 5px;
+      max-height: 45px;
+      max-width: 45px;
+      &-line {
+        transition: transform 0.75s ease, opacity 0.75s ease;
+        display: block;
+        width: 25px;
+        height: 2.5px;
+        background-color: $black;
+        margin: 6px 0;
+      }
+      &:hover {
+        .header__burger-line {
+          background-color: $blue;
+        }
+      }
+      &.open {
+        .header__burger-line1 {
+          transform: translate(-7px) rotate(45deg) translate(10px);
+        }
+        .header__burger-line2 {
+          opacity: 0;
+        }
+        .header__burger-line3 {
+          transform: translate(-10px) rotate(-45deg) translate(15px);
+        }
+      }
+    }
+    &__right {
+      width: calc(100% + 39px);
+      left: -39px;
+      position: absolute;
+      overflow: hidden;
+      opacity: 0;
+      height: 0;
+      top: 0;
+      z-index: 1;
+      transition: all 0.5s ease;
+      padding-left: 40px;
+      &.show {
+        height: 795px;
+        opacity: 1;
+        flex-direction: column;
+        background-color: $white;
+      }
+    }
+    &__socials {
+      display: flex;
+      margin-bottom: 50px;
+      margin-top: -50px;
+      li {
+        &:not(:last-child) {
+          border-right: rgba($black,0.2) solid 1.5px;
+          padding-right: 8px;
+          margin-right: 8px;
+        }
+        a {
+          font-size: 18px;
+          font-weight: 700;
+          color: $blue;
+        }
+
+      }
+    }
+    &__image {
+      display: none;
+    }
+    &__text {
+      font-size: 36px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    &__mail {
+      .header__text {
+        font-size: 25px;
+      }
+    }
+    &__menu {
+      flex-direction: column;
+      height: 53%;
+      justify-content: normal;
+      li {
+        font-size: 40px;
+        margin-top: 35px;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

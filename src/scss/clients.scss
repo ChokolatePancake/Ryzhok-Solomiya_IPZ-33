@@ -1,0 +1,67 @@
+.clients {
+  padding-top: 62px;
+  padding-bottom: 92px;
+  h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__block {
+    padding: 13px 31px;
+    border-radius: 5px;
+    border: 1px $mid-grey solid;
+    transition: all 0.5s ease;
+    svg {
+      transition: all 0.5s ease;
+    }
+    &:hover {
+      border-color: $blue;
+      svg {
+        fill: $blue;
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    h2 {
+      margin-top: 0;
+      font-size: 34px;
+    }
+    &__block {
+      padding: 13px 14px;
+    }
+  }
+
+  @include breakpoint(laptop) {
+    padding-bottom: 52px;
+    &__block {
+      padding: 13px 50px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include breakpoint(largeTablet) {
+    margin: 0 5px;
+    padding-top: 60px;
+    padding-bottom: 32px;
+    h2 {
+      font-size: 30px;
+      margin-bottom: 28px;
+    }
+    &__block {
+      padding: 13px 59px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &__block {
+      padding: 13px 51px;
+    }
+  }
+}

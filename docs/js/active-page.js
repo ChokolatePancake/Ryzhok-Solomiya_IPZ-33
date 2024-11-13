@@ -1,0 +1,1 @@
+const currentPath=window.location.pathname,menuLinks=document.querySelectorAll(".header__menu a");menuLinks.forEach((e=>{const t=e.getAttribute("href");(currentPath===t||"/"===currentPath&&"/index.html"===t)&&e.querySelector("li").classList.add("active")}));

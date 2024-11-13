@@ -1,0 +1,100 @@
+.banner {
+  position: relative;
+  &__image {
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    background-image: url("../images/banner.jpeg");
+  }
+  &__content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+  }
+  &__text {
+    text-transform: uppercase;
+    line-height: 59px;
+    font-size: 43px;
+    letter-spacing: 3.1px;
+    margin: -57px auto 0;
+    font-weight: 700;
+    color: $white;
+    max-width: 660px;
+  }
+  &__button {
+    margin-top: 32px;
+    margin-bottom: -54px;
+    button {
+      font-weight: 700;
+      padding: 15px 28px;
+      border-radius: 5px;
+      background: $blue;
+      border: none;
+      color: $white;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        background: $dark-blue;
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    &__image {
+      img {
+        top: 0;
+      }
+    }
+  }
+
+  @include breakpoint(laptop) {
+    &__image {
+      height: 500px;
+    }
+  }
+
+  @include breakpoint(largeTablet) {
+    &__text {
+      font-size: 27px;
+      max-width: 370px;
+      margin-top: -59px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+    }
+    &__image {
+      height: 400px;
+    }
+    &__button {
+      margin-bottom: -60px;
+
+      button {
+        padding: 14px 24px;
+        font-size: 18px;
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    &__image {
+      img {
+        min-height: 400px;
+        width: 100%;
+      }
+    }
+    &__content {
+      top: 2px;
+    }
+    &__text {
+      font-size: 27px;
+      line-height: 42px;
+    }
+    &__button {
+      margin-bottom: -55px;
+      button {
+        padding: 15px 24px;
+      }
+    }
+  }
+}
